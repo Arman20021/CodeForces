@@ -1,2 +1,2 @@
 # CodeForces
-All code solve by me
+All codes solved by me
