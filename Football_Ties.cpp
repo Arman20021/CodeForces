@@ -5,9 +5,14 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    ll n;
-    cin >> n;
-    cout << (pow (-1,n))*n << endl;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << a % 3 << endl;
+    }
 
     return 0;
 }

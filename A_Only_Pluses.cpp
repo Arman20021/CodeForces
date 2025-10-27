@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int a, b, c;
+        cin >> a >> b >> c;
+
+        for (int i = 0; i < 5; ++i) {
+            // Sort the values to increment the smallest one
+            if (a <= b && a <= c) {
+                a++;
+            } else if (b <= a && b <= c) {
+                b++;
+            } else {
+                c++;
+            }
+        }
+
+        // Output the maximum product
+        cout << a * b * c << endl;
+    }
+
+    return 0;
+}

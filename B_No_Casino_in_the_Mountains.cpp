@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int n, k;
+        cin >> n >> k;
+        vector<int> v(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> v[i];
+        }
+
+        int hikes = 0;
+        int i = 0;
+
+        while (i <= n - k)
+        {
+            bool can_hike = true;
+            for (int j = 0; j < k; j++)
+            {
+                if (v[i + j] == 1)
+                {
+                    can_hike = false;
+                    break;
+                }
+            }
+
+            if (can_hike)
+            {
+                hikes++;
+                i += k + 1;  
+            }
+            else
+            {
+                i++;  
+            }
+        }
+
+        cout << hikes << '\n';
+    }
+
+    return 0;
+}
